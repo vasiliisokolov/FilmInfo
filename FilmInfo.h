@@ -1,8 +1,13 @@
-﻿// FilmInfo.h : включаемый файл для стандартных системных включаемых файлов
-// или включаемые файлы для конкретного проекта.
-
-#pragma once
-
+﻿#pragma once
 #include <iostream>
+#include <fstream>
+#include "nlohmann/json.hpp"
+using json = nlohmann::json;
 
-// TODO: установите здесь ссылки на дополнительные заголовки, требующиеся для программы.
+struct SearchingOne
+{
+	std::string name;
+	std::string family;
+	std::string film;
+
+};

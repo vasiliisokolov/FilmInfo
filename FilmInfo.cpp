@@ -1,12 +1,9 @@
-﻿// FilmInfo.cpp: определяет точку входа для приложения.
-//
-
-#include "FilmInfo.h"
-
-using namespace std;
+﻿#include "FilmInfo.h"
 
 int main()
 {
-	cout << "Hello CMake." << endl;
-	return 0;
+	std::ifstream f("films.json");
+	json data = json::parse(f);
+
+
 }

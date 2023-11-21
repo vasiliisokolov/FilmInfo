@@ -11,8 +11,14 @@ endif()
 
 project ("FilmInfo")
 
+set(JSON_BuildTests OFF CACHE INTERNAL "")
+
+add_subdirectory(nlohmann_json)
+
 # Добавьте источник в исполняемый файл этого проекта.
 add_executable (FilmInfo "FilmInfo.cpp" "FilmInfo.h")
+
+target_link_libraries(FilmInfo PRIVATE nlohmann_json::nlohmann_json)
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET FilmInfo PROPERTY CXX_STANDARD 20)
